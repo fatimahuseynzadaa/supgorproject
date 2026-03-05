@@ -1,38 +1,40 @@
-
 export const setProducts = (products) => ({
   type: "SET_PRODUCTS",
-  payload: products
+  payload: products,
 });
 export const addProduct = (product) => ({
   type: "ADD_PRODUCT",
-  payload: product
+  payload: product,
 });
 export const filterProduct = (category) => ({
   type: "FILTER_PRODUCT",
-  payload: category
+  payload: category,
 });
 
 export const deleteProduct = (id) => ({
   type: "DELETE_PRODUCT",
-  payload: id
+  payload: id,
+});
+
+export const updateProduct = (product) => ({
+  type: "UPDATE_PRODUCT",
+  payload: product,
 });
 
 export const deleteProductsByCategory = (category) => ({
   type: "DELETE_PRODUCTS_BY_CATEGORY",
-  payload: category
+  payload: category,
 });
 
 export const addToBasket = (product) => ({
   type: "ADD_TO_BASKET",
-  product
+  product,
 });
 
 export const deleteFromBasket = (id) => ({
   type: "DELETE_FROM_BASKET",
-  id
+  id,
 });
-
-
 
 // export const setProducts = (products) => ({
 //   type: "SET_PRODUCTS",

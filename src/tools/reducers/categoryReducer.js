@@ -1,27 +1,32 @@
-
 const initialState = {
-  all: JSON.parse(localStorage.getItem("categories")) || []
+  all: JSON.parse(localStorage.getItem("categories")) || [],
 };
 
 export const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
-
     case "ADD_CATEGORY":
       const updatedCategories = [...state.all, action.payload];
       localStorage.setItem("categories", JSON.stringify(updatedCategories));
       return {
         ...state,
-        all: updatedCategories
+        all: updatedCategories,
       };
 
     case "DELETE_CATEGORY":
       const filteredCategories = state.all.filter(
-        cat => cat.value !== action.payload
+        (cat) => cat.value !== action.payload,
       );
       localStorage.setItem("categories", JSON.stringify(filteredCategories));
       return {
         ...state,
-        all: filteredCategories
+        all: filteredCategories,
+      };
+    case "UPDATE_CATEGORY":
+      return {
+        ...state,
+        all: state.all.map((c) =>
+          c.value === action.payload.value ? action.payload : c,
+        ),
       };
 
     default:

@@ -1,29 +1,29 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { deleteCategory } from '../../../tools/actions/categoryActions';
-import Swal from 'sweetalert2';
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { deleteCategory } from "../../../tools/actions/categoryActions";
+import Swal from "sweetalert2";
 const CategoryList = () => {
   const dispatch = useDispatch();
-  const categories = useSelector(state => state.category.all);
+  const categories = useSelector((state) => state.category.all);
 
   const handleDelete = (value) => {
     Swal.fire({
-      title: 'Are you sure?',
+      title: "Are you sure?",
       text: "All related products will also be deleted!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
         dispatch(deleteCategory(value));
 
         Swal.fire(
-          'Deleted!',
-          'Category and its products have been deleted.',
-          'success'
-        )
+          "Deleted!",
+          "Category and its products have been deleted.",
+          "success",
+        );
       }
     });
   };
@@ -61,7 +61,10 @@ const CategoryList = () => {
                 <td>{item.title}</td>
                 <td>{item.value}</td>
                 <td>
-                  <Link className="btn btn-warning btn-sm">
+                  <Link
+                    className="btn btn-warning btn-sm"
+                    to={`/dashboard/category/edit/${item.value}`}
+                  >
                     Edit
                   </Link>
                 </td>
@@ -80,6 +83,6 @@ const CategoryList = () => {
       </table>
     </div>
   );
-}
+};
 
-export default CategoryList
+export default CategoryList;
