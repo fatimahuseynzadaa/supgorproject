@@ -1,0 +1,118 @@
+
+.basket-container {
+    background-color: #f8f9fa;
+    min-height: 80vh;
+}
+
+.basket-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+
+.basket-table {
+    background: white;
+    margin-bottom: 0;
+}
+
+.basket-table thead th {
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 1.25rem;
+    border: none;
+}
+
+.basket-table tbody td {
+    padding: 1.5rem 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+
+.product-img-wrapper {
+    width: 70px;
+    height: 70px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quantity-control {
+    display: inline-flex;
+    align-items: center;
+    background: #f1f5f9;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.qty-btn {
+    border: none;
+    background: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #1e293b;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.qty-btn:hover {
+    background: #1e293b;
+    color: white;
+}
+
+.qty-value {
+    margin: 0 15px;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+
+.delete-btn {
+    border: none;
+    background: #fee2e2;
+    color: #ef4444;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    background: #ef4444;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+.basket-summary {
+    border: 1px solid #f1f5f9;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
