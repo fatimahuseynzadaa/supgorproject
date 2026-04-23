@@ -16,4 +16,4 @@ export const updateCategory = (category) => ({
 export const deleteCategory = (value) => ({
   type: "DELETE_CATEGORY",
   payload: value,
-});
+}); 
